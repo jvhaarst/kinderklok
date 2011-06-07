@@ -1,13 +1,14 @@
-// ATMega168 Code
+// Originally from http://www.nearfuturelaboratory.com/2006/12/14/arduino-and-ds1306-real-time-clock/
 // ATMega168 Code
 #include <avr/interrupt.h>
 #include <avr/io.h>
  
-#define DATAOUT 11 //MOSI
-#define DATAIN  12 //MISO
-#define SPICLOCK  13 //sck
-#define RTC_CHIPSELECT 7 // chip select (ss/ce) for RTC, active high
-#define LED 10
+#define DATAOUT 10 //MOSI
+#define DATAIN  11 //MISO
+#define SPICLOCK  12 //sck
+#define RTC_CHIPSELECT 9 // chip select (ss/ce) for RTC, active high
+#define LED 13
+
  
 byte clr;
 char spi_transfer(volatile char data)
